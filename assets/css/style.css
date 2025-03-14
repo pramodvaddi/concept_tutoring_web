@@ -461,7 +461,7 @@ body {
 }
 
 .category-card {
-  background-color: var(--light-green);
+  background: linear-gradient(135deg, var(--light-green), var(--light-blue));
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -692,6 +692,8 @@ body {
 }
 
 
+/* Testimonials */
+
 .testimonial-container {
   display: flex;
   flex-wrap: wrap;
@@ -730,6 +732,8 @@ body {
     max-width: 90%;
   }
 }
+
+
 /* cta Cards */
 .cta-section {
   background: linear-gradient(135deg, var(--light-green), var(--light-blue));
@@ -784,169 +788,6 @@ body {
 }
 
 
-*-----------------------------------*\
-  #COURSE
-\*-----------------------------------*/
-
-.course { background-color: var(--isabelline); }
-
-.course-card {
-  position: relative;
-  background-color: var(--white);
-  border-radius: var(--radius-5);
-  overflow: hidden;
-}
-
-.course-card .img-cover { transition: var(--transition-2); }
-
-.course-card:is(:hover, :focus-within) .img-cover { transform: scale(1.1); }
-
-.course-card :is(.abs-badge, .badge) {
-  font-family: var(--ff-league_spartan);
-  border-radius: var(--radius-3);
-}
-
-.course-card .abs-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: var(--selective-yellow);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  line-height: 1;
-  padding: 6px 8px;
-  padding-block-end: 3px;
-}
-
-.course-card .abs-badge ion-icon {
-  font-size: 18px;
-  margin-block-end: 5px;
-  --ionicon-stroke-width: 50px;
-}
-
-.course-card .card-content { padding: 25px; }
-
-.course-card .badge {
-  background-color: var(--kappel_15);
-  max-width: max-content;
-  color: var(--kappel);
-  line-height: 25px;
-  padding-inline: 10px;
-}
-
-.course-card .card-title {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  margin-block: 15px 8px;
-  transition: var(--transition-1);
-}
-
-.course-card .card-title:is(:hover, :focus) { color: var(--kappel); }
-
-.course-card :is(.wrapper, .rating-wrapper, .card-meta-list, .card-meta-item) {
-  display: flex;
-  align-items: center;
-}
-
-.course-card .wrapper { gap: 10px; }
-
-.course-card .rating-wrapper { gap: 3px; }
-
-.course-card .rating-wrapper ion-icon { color: var(--selective-yellow); }
-
-.course-card .rating-text {
-  color: var(--eerie-black-1);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-500);
-}
-
-.course-card .price {
-  color: var(--radical-red);
-  font-family: var(--ff-league_spartan);
-  font-size: var(--fs-4);
-  font-weight: var(--fw-600);
-  margin-block: 8px 15px;
-}
-
-.course-card .card-meta-list { flex-wrap: wrap; }
-
-.course-card .card-meta-item {
-  position: relative;
-  gap: 5px;
-}
-
-.course-card .card-meta-item:not(:last-child)::after {
-  content: "|";
-  display: inline-block;
-  color: var(--platinum);
-  padding-inline: 10px;
-}
-
-.course-card .card-meta-item ion-icon {
-  color: var(--quick-silver);
-  --ionicon-stroke-width: 50px;
-}
-
-.course-card .card-meta-item .span {
-  color: var(--eerie-black-1);
-  font-size: var(--fs-7);
-}
-
-.course .btn {
-  margin-inline: auto;
-  margin-block-start: 60px;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #VIDEO
-\*-----------------------------------*/
-
-.video {
-  background-size: contain;
-  background-position: center top;
-}
-
-.video-banner {
-  position: relative;
-  border-top-right-radius: 80px;
-  border-bottom-left-radius: 120px;
-}
-
-.video .play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--radical-red);
-  font-size: 30px;
-  padding: 16px;
-  color: var(--white);
-  border-radius: var(--radius-circle);
-  box-shadow: 0 0 0 0 var(--white_50);
-  z-index: 1;
-  animation: pulse 3s ease infinite;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 var(--white_50); }
-  100% { box-shadow: 0 0 0 20px transparent; }
-}
-
-.video-banner::after {
-  inset: 0;
-  background-color: var(--black_30);
-}
-
-
-
 
 
 /*-----------------------------------*\
@@ -970,93 +811,6 @@ body {
 .stats-card .card-text {
   color: var(--eerie-black-1);
   text-transform: uppercase;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
-
-.blog-card .card-banner { border-radius: var(--radius-10); }
-
-.blog-card .card-banner .img-cover { transition: var(--transition-2); }
-
-.blog-card .card-banner::after {
-  inset: 0;
-  background-color: var(--black_50);
-  opacity: 0;
-  transition: var(--transition-1);
-}
-
-.blog-card:is(:hover, :focus-within) .card-banner .img-cover { transform: scale(1.1); }
-
-.blog-card:is(:hover, :focus-within) .card-banner::after { opacity: 1; }
-
-.blog-card .card-content {
-  position: relative;
-  margin-inline: 15px;
-  background-color: var(--white);
-  padding: 20px;
-  border-radius: var(--radius-10);
-  box-shadow: var(--shadow-3);
-  margin-block-start: -100px;
-  z-index: 1;
-}
-
-.blog-card .card-btn {
-  position: absolute;
-  top: -40px;
-  right: 30px;
-  background-color: var(--kappel);
-  color: var(--white);
-  font-size: 20px;
-  padding: 20px;
-  border-radius: var(--radius-circle);
-  transition: var(--transition-1);
-  opacity: 0;
-}
-
-.blog-card .card-btn:is(:hover, :focus) { background-color: var(--radical-red); }
-
-.blog-card:is(:hover, :focus-within) .card-btn {
-  opacity: 1;
-  transform: translateY(10px);
-}
-
-.blog-card :is(.card-meta-item, .card-text, .card-subtitle) {
-  font-size: var(--fs-5);
-}
-
-.blog-card .card-subtitle { text-transform: uppercase; }
-
-.blog-card .card-title {
-  margin-block: 10px 15px;
-  transition: var(--transition-1);
-}
-
-.blog-card .card-title:is(:hover, :focus) { color: var(--kappel); }
-
-.blog-card :is(.card-meta-list, .card-meta-item) { display: flex; }
-
-.blog-card .card-meta-list {
-  flex-wrap: wrap;
-  gap: 10px 20px;
-  margin-block-end: 20px;
-}
-
-.blog-card .card-meta-item {
-  gap: 10px;
-  align-items: center;
-  color: var(--eerie-black-1);
-}
-
-.blog-card .card-meta-item ion-icon {
-  color: var(--kappel);
-  font-size: 18px;
-  --ionicon-stroke-width: 40px;
 }
 
 
