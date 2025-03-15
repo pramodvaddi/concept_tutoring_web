@@ -607,7 +607,7 @@ body {
   background: linear-gradient(135deg, var(--light-green), var(--light-blue));
   padding: 50px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: var(--eerie-black-1);
   font-family: var(--ff-poppins);
@@ -650,7 +650,7 @@ body {
   .how-it-works-card {
     width: 95%; /* Increase card width */
     max-width: none; /* Allow it to expand fully */
-    padding: 40px; /* Adjust padding for better spacing */
+    padding: 20px; /* Adjust padding for better spacing */
   }
 
   .how-it-works-card li {
