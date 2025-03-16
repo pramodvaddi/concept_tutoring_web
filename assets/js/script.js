@@ -61,3 +61,17 @@ const activeElem = function () {
 }
 
 addEventOnElem(window, "scroll", activeElem);
+
+function toggleTestimonials() {
+  let hiddenTestimonials = document.querySelectorAll('.testimonial-card:nth-child(n+3)');
+  let button = document.querySelector('.testimonial-btn');
+
+  if (button.innerText === "More") {
+    hiddenTestimonials.forEach(testimonial => testimonial.style.display = "block");
+    button.innerText = "Show Less";
+  } else {
+    hiddenTestimonials.forEach(testimonial => testimonial.style.display = "none");
+    button.innerText = "More";
+  }
+}
+
