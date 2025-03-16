@@ -403,11 +403,11 @@ body {
 .nav-open-btn {
   display: none; /* Hide by default */
   position: fixed;
-  top: 15px;
+  top: 25px;
   right: 15px;
   background: var(--white);
   box-shadow: var(--shadow-2);
-  padding: 10px;
+  padding: 12px;
   border-radius: var(--radius-circle);
   cursor: pointer;
   z-index: 3;
@@ -416,11 +416,6 @@ body {
 .nav-open-btn:is(:hover, :focus) {
   background-color: var(--kappel);
   color: var(--white);
-}
-
-/* Hide Logo when Navbar is Open */
-.navbar.active .hide-on-menu {
-  display: none;
 }
 
 /* ======== RESPONSIVE DESIGN ======== */
