@@ -405,12 +405,13 @@ body {
   position: fixed;
   top: 25px;
   right: 15px;
-  background: var(--white);
+  background: var(--kappel);
   box-shadow: var(--shadow-2);
   padding: 12px;
   border-radius: var(--radius-circle);
   cursor: pointer;
   z-index: 3;
+  color: white;
 }
 
 .nav-open-btn:is(:hover, :focus) {
@@ -970,11 +971,11 @@ body {
 .back-top-btn {
   position: fixed;
   bottom: 40px;
-  right: 30px;
+  right: 15px;
   background-color: var(--kappel);
   color: var(--white);
   font-size: 20px;
-  padding: 15px;
+  padding: 12px;
   border-radius: var(--radius-circle);
   z-index: 3;
   opacity: 0;
